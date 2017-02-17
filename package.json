@@ -16,7 +16,6 @@
     "babel-runtime": "^6.23.0",
     "promise-polyfill": "^6.0.2",
     "vue": "^2.1.0",
-    "vue-awesome": "^2.1.0",
     "vue-axios": "^1.2.2",
     "vue-i18n": "^5.0.1",
     "vue-progressbar": "^0.7.1",
