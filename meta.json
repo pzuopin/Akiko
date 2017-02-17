@@ -1,0 +1,33 @@
+{
+	"prompts": {
+		"name": {
+			"type": "string",
+			"required": true,
+			"message": "Project name"
+		},
+		"description": {
+			"type": "string",
+			"required": false,
+			"message": "Project description",
+			"default": "My sadistic vue-project"
+		},
+		"author": {
+			"type": "string",
+			"message": "Author"
+		},
+		"eslint": {
+			"type": "confirm",
+			"message": "Do you want to support ESLint?"
+		},
+		"electron": {
+			"type": "confirm",
+			"message": "Do you want to support Electron?",
+			"default": false
+		}
+	},
+	"filters": {
+		"app/*": "electron",
+		".eslintrc": "eslint"
+	},
+	"completeMessage": "To get started:\n\n cd {{destDirName}}\n npm i\n npm run dev{{#electron}}\n\nIn another tab:\n\n npm run app{{/electron}}"
+}

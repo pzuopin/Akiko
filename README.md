@@ -15,11 +15,12 @@
 - JSX components are supported by default
 - A boilerplate which is small and focusing on client-side apps
 
-## Quick Start
+## Quick Start with vue-cli
 
 ```bash
-git clone https://github.com/iCrawl/Akiko.git <my-app>
-cd <my-app>
+npm i -g vue-cli
+vue init icrawl/akiko my-app
+cd my-app
 npm i
 
 # edit files with hotreloading for development
@@ -35,14 +36,17 @@ npm run lint
 ## Folder Structure
 
 ```bash
-├── build           # webpack configs and other scripts
-├── client          # client-side app files
-├── dist            # bundled files and index.html
+├── app             # The actual app you want to bundle with Electron
+│    ├── dist       # Bundled files
+│    └── index.js   # Entry file for Electron
+├── build           # Webpack configs and other scripts
+├── client          # Client-side app files
+├── dist            # Bundled files
 │    ├── index.html
 │    └── [...other bundled files]
-├── static          # static files that need bundling
-├── node_modules    # dependencies
-└── package.json    # package info
+├── static          # Static files that need bundling
+├── node_modules    # Dependencies
+└── package.json    # Package info
 ```
 
 ## Custom template

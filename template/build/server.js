@@ -13,6 +13,10 @@ webpackConfig.entry.client = [
 	`webpack-hot-middleware/client?reload=true`,
 	webpackConfig.entry.client
 ];
+{{#electron}}
+
+webpackConfig.output.publicPath = `http://localhost:${post}/assets/`
+{{/electron}}
 
 webpackConfig.plugins.push(new LogPlugin(port));
 

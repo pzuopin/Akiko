@@ -9,10 +9,15 @@ const base = require('./webpack.base');
 const _ = require('./utils');
 const config = require('./config');
 
-// Remove dist folder in web app mode
-exec('rm -rf dist/');
-// Use source-map in web app mode
-base.devtool = 'source-map';
+if (config.electron) {
+	// Remove dist folder in electron mode
+	exec('rm -rf app/assets/');
+} else {
+	// Remove dist folder in web app mode
+	exec('rm -rf dist/');
+	// Use source-map in web app mode
+	base.devtool = 'source-map';
+}
 
 // A whitelist to add dependencies to vendor chunk
 base.entry.vendor = config.vendor;
@@ -28,7 +33,7 @@ base.plugins.push(
 		compress: { warnings: false },
 		output: { comments: false }
 	}),
-	// extract vendor chunks
+	// Extract vendor chunks
 	new webpack.optimize.CommonsChunkPlugin({
 		name: 'vendor',
 		filename: 'vendor.[chunkhash:8].js'

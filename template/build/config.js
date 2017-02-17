@@ -2,9 +2,8 @@
 
 module.exports = {
 	port: 4000,
-	title: 'Akiko - A sadistic vue-boilerplate',
-	// Only set to absolute path when you're using history mode
-	publicPath: '/',
+	title: '{{name}}',
+	publicPath: '{{#if electron}}.{{/if}}/',
 	// Add these dependencies to a standalone vendor bundle
 	vendor: [
 		'vue',
@@ -32,5 +31,7 @@ module.exports = {
 		}),
 		require('postcss-nested')
 	],
-	cssModules: false
+	cssModules: false,{{#if electron}}
+	electron: true,{{/if}}{{#if jsx}}
+	jsx: true
 };

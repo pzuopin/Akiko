@@ -38,3 +38,10 @@ jspm_packages
 
 .DS_Store
 .vscode
+{{#electron}}
+/app/index.html
+/app/assets
+{{/electron}}
+{{#unless electron}}
+/dist
+{{/unless}}

@@ -2,56 +2,18 @@
   "name": "akiko",
   "version": "1.0.0",
   "description": "A sadistic vue-boilerplate",
-  "main": "client/index.js",
   "scripts": {
-    "test": "echo lol",
-    "build": "webpack --config build/webpack.prod.js",
-    "dev": "node build/server.js",
-    "lint": "eslint client/* --ext .js --ext .vue"
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iCrawl/akiko.git"
   },
   "author": "Crawl <icrawltogo@gmail.com>",
   "license": "MIT",
-  "dependencies": {
-    "axios": "^0.15.3",
-    "babel-runtime": "^6.23.0",
-    "bulma": "^0.3.1",
-    "promise-polyfill": "^6.0.2",
-    "vue": "^2.1.0",
-    "vue-axios": "^1.2.2",
-    "vue-head": "^2.0.10",
-    "vue-i18n": "^5.0.1",
-    "vue-progressbar": "^0.7.1",
-    "vue-router": "^2.2.1",
-    "vuex": "^2.1.2",
-    "vuex-router-sync": "^4.1.2"
+  "bugs": {
+    "url": "https://github.com/iCrawl/tohru/issues"
   },
-  "devDependencies": {
-    "autoprefixer": "^6.7.3",
-    "babel-core": "^6.23.1",
-    "babel-loader": "^6.3.2",
-    "babel-preset-vue-app": "^0.4.0",
-    "chalk": "^1.1.3",
-    "copy-webpack-plugin": "^4.0.1",
-    "cross-env": "^3.1.4",
-    "css-loader": "^0.26.1",
-    "eslint": "^3.15.0",
-    "eslint-config-vue": "^2.0.2",
-    "eslint-plugin-vue": "^2.0.1",
-    "express": "^4.14.1",
-    "extract-text-webpack-plugin": "^2.0.0-rc.3",
-    "file-loader": "^0.10.0",
-    "friendly-errors-webpack-plugin": "^1.3.1",
-    "html-webpack-plugin": "^2.28.0",
-    "node-sass": "^4.5.0",
-    "postcss-loader": "^1.3.0",
-    "postcss-nested": "^1.0.0",
-    "raw-loader": "^0.5.1",
-    "sass-loader": "^6.0.0",
-    "style-loader": "^0.13.1",
-    "vue-loader": "^10.3.0",
-    "vue-template-compiler": "^2.1.10",
-    "webpack": "2.2.1",
-    "webpack-dev-middleware": "^1.10.0",
-    "webpack-hot-middleware": "^2.17.0"
-  }
+  "homepage": "https://github.com/iCrawl/tohru#readme",
+  "dependencies": {}
 }
