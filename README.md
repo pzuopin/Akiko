@@ -1,15 +1,16 @@
 <p align="center">
-	<strong>Akiko</strong> is a sadistic, easy-to-use, minimal Vue.js starter <br>which uses Vue 2, Vuex, Vue-router, Vue-axios, Vue-i18n and Webpack 2.
+	<strong>Akiko</strong> is a sadistic, easy-to-use, minimal Vue.js starter <br>which uses Vue 2, Vuex, Vue-router, Vue-head, Vue-axios, Vue-i18n and Webpack 2.
 </p>
 
 ## Features
 
-- Vue 2 / Vue-router / Vuex / Vue-i18n / Vue-axios
+- Vue 2 / Vuex / Vue-router / Vue-head / Vue-axios / Vue-i18n
 - Hot reloading for single-file components
 - Split vendor code from your app
 - Webpack 2
 - ESLint
 - Babel 6
+- SASS/SCSS
 - PostCSS
 - JSX components are supported by default
 - A boilerplate which is small and focusing on client-side apps
