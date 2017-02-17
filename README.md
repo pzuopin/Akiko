@@ -1,5 +1,5 @@
 <div align="center">
-	<img src="https://lolisafe.moe/QHKALknp.png" width="500" />
+	<img src="https://lolisafe.moe/QHKALknp.png" width="400" />
 	<br />
 	<p>
 		<strong>Akiko</strong> is a sadistic, easy-to-use, minimal Vue.js starter <br>which uses Vue 2, Vuex, Vue-router, Vue-head, Vue-axios, Vue-i18n and Webpack 2.
