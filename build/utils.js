@@ -21,17 +21,11 @@ _.cssProcessors = [
 	{ loader: 'sass-loader?indentedSyntax&sourceMap', test: /\.sass$/ }
 ];
 
-_.outputPath = config.electron
-	? path.join(__dirname, '../app/dist')
-	: path.join(__dirname, '../dist');
+_.outputPath = path.join(__dirname, '../dist');
 
-_.outputIndexPath = config.electron
-	? path.join(__dirname, '../app/dist/index.html')
-	: path.join(__dirname, '../dist/index.html');
+_.outputIndexPath = path.join(__dirname, '../dist/index.html');
 
-_.target = config.electron
-	? 'electron-renderer'
-	: 'web';
+_.target = 'web';
 
 _.loadersOptions = () => {
 	const isProd = process.env.NODE_ENV === 'production';

@@ -15,7 +15,8 @@ module.exports = {
 		'axios',
 		'vue-axios',
 		'vue-i18n',
-		'promise-polyfill'
+		'promise-polyfill',
+		'bulma'
 	],
 	// Disable babelrc by default
 	babel: {
