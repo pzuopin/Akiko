@@ -33,7 +33,6 @@ _.target = config.electron
 	? 'electron-renderer'
 	: 'web';
 
-// https://github.com/egoist/vbuild/blob/master/lib/vue-loaders.js
 _.loadersOptions = () => {
 	const isProd = process.env.NODE_ENV === 'production';
 
@@ -51,13 +50,13 @@ _.loadersOptions = () => {
 	return {
 		minimize: isProd,
 		options: {
-			// css-loader relies on context
+			// CSS-loader relies on context
 			context: process.cwd(),
-			// postcss plugins apply to .css files
+			// Postcss plugins apply to .css files
 			postcss: config.postcss,
 			babel: config.babel,
 			vue: {
-				// postcss plugins apply to css in .vue files
+				// Postcss plugins apply to css in .vue files
 				postcss: config.postcss,
 				loaders: {
 					css: generateLoader([]),

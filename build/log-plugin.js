@@ -1,7 +1,7 @@
 'use strict';
 const chalk = require('chalk');
 
-// this plugin if for loggin url after each time the compilation is done.
+// This plugin if for loggin url after each time the compilation is done.
 module.exports = class LogPlugin {
 	constructor(port) {
 		this.port = port;

@@ -14,7 +14,7 @@ base.plugins.push(
 	new FriendlyErrors()
 );
 
-// push loader for css files
+// Push loader for css files
 _.cssProcessors.forEach(processor => {
 	let loaders;
 	if (processor.loader === '') {

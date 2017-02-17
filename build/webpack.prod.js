@@ -9,21 +9,16 @@ const base = require('./webpack.base');
 const _ = require('./utils');
 const config = require('./config');
 
-if (config.electron) {
-	// remove dist folder in electron mode
-	exec('rm -rf app/assets/');
-} else {
-	// remove dist folder in web app mode
-	exec('rm -rf dist/');
-	// use source-map in web app mode
-	base.devtool = 'source-map';
-}
+// Remove dist folder in web app mode
+exec('rm -rf dist/');
+// Use source-map in web app mode
+base.devtool = 'source-map';
 
-// a white list to add dependencies to vendor chunk
+// A whitelist to add dependencies to vendor chunk
 base.entry.vendor = config.vendor;
-// use hash filename to support long-term caching
+// Use hash filename to support long-term caching
 base.output.filename = '[name].[chunkhash:8].js';
-// add webpack plugins
+// Add webpack plugins
 base.plugins.push(
 	new ProgressPlugin(),
 	new ExtractTextPlugin('styles.[contenthash:8].css'),
@@ -40,7 +35,7 @@ base.plugins.push(
 	})
 );
 
-// extract css in standalone css files
+// Extract css in standalone css files
 _.cssProcessors.forEach(processor => {
 	let loaders;
 	if (processor.loader === '') {
@@ -57,7 +52,7 @@ _.cssProcessors.forEach(processor => {
 	});
 });
 
-// minimize webpack output
+// Minimize webpack output
 base.stats = {
 	// Add children information
 	children: false,
