@@ -33,5 +33,5 @@ module.exports = {
 	],
 	cssModules: false,{{#if electron}}
 	electron: true,{{/if}}{{#if jsx}}
-	jsx: true
+	jsx: true{{/if}}
 };

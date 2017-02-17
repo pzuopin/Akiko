@@ -10,12 +10,12 @@ const app = express();
 
 const port = config.port;
 webpackConfig.entry.client = [
-	`webpack-hot-middleware/client?reload=true`,
+	`webpack-hot-middleware/client?reload=true{{#electron}}&path=http://localhost:${port}/__webpack_hmr{{/electron}}`,
 	webpackConfig.entry.client
 ];
 {{#electron}}
 
-webpackConfig.output.publicPath = `http://localhost:${post}/assets/`
+webpackConfig.output.publicPath = `http://localhost:${port}/assets/`
 {{/electron}}
 
 webpackConfig.plugins.push(new LogPlugin(port));
