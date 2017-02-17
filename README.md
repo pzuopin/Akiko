@@ -44,6 +44,10 @@ npm run lint
 └── package.json    # package info
 ```
 
+## Custom template
+
+If you want to customize the output of `index.html` and remove Bulma, simply modify [index.html](https://github.com/iCrawl/Akiko/blob/master/build/index.html), see more at [html-webpack-plugin](https://github.com/ampedandwired/html-webpack-plugin).
+
 ## Projects using Akiko
 
 - Feel free to add yours here :)

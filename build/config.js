@@ -10,7 +10,6 @@ module.exports = {
 	vendor: [
 		'vue',
 		'vuex',
-		'vue-events',
 		'vue-router',
 		'vuex-router-sync',
 		'vue-progressbar',
