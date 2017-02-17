@@ -2,7 +2,7 @@
 
 module.exports = {
 	port: 4000,
-	title: '',
+	title: 'Akiko - A sadistic vue-boilerplate',
 	// Only set to absolute path when you're using history mode
 	publicPath: '/',
 	// Add these dependencies to a standalone vendor bundle
@@ -11,6 +11,7 @@ module.exports = {
 		'vuex',
 		'vue-router',
 		'vuex-router-sync',
+		'vue-head',
 		'vue-progressbar',
 		'axios',
 		'vue-axios',

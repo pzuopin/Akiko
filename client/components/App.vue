@@ -1,4 +1,5 @@
-<style>
+<style lang="scss">
+ @import '~bulma';
 </style>
 
 <template>

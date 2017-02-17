@@ -30,7 +30,7 @@ const devMiddleWare = require('webpack-dev-middleware')(compiler, {
 	quiet: true
 });
 app.use(devMiddleWare);
-app.use(require('webpack-hot-middleware')(compiler, { log: () => {} }));
+app.use(require('webpack-hot-middleware')(compiler, { log: () => {} })); // eslint-disable-line no-empty-function
 
 const mfs = devMiddleWare.fileSystem;
 const file = path.join(webpackConfig.output.path, 'index.html');

@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import { sync } from 'vuex-router-sync';
+import VueHead from 'vue-head';
 import axios from 'axios';
 import VueAxios from 'vue-axios';
 import VueI18n from 'vue-i18n';
@@ -19,6 +20,7 @@ const options = {
 	inverse: true
 };
 
+Vue.use(VueHead);
 Vue.use(VueAxios, axios);
 Vue.use(VueI18n);
 
