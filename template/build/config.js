@@ -4,20 +4,6 @@ module.exports = {
 	port: 4000,
 	title: '{{name}}',
 	publicPath: '{{#if electron}}.{{/if}}/',
-	// Add these dependencies to a standalone vendor bundle
-	vendor: [
-		'vue',
-		'vuex',
-		'vue-router',
-		'vuex-router-sync',
-		'vue-head',
-		'vue-progressbar',
-		'axios',
-		'vue-axios',
-		'vue-i18n',
-		'promise-polyfill',
-		'bulma'
-	],
 	// Disable babelrc by default
 	babel: {
 		babelrc: false,

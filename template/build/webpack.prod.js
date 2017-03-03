@@ -19,8 +19,6 @@ if (config.electron) {
 	base.devtool = 'source-map';
 }
 
-// A whitelist to add dependencies to vendor chunk
-base.entry.vendor = config.vendor;
 // Use hash filename to support long-term caching
 base.output.filename = '[name].[chunkhash:8].js';
 // Add webpack plugins
@@ -36,8 +34,11 @@ base.plugins.push(
 	// Extract vendor chunks
 	new webpack.optimize.CommonsChunkPlugin({
 		name: 'vendor',
-		filename: 'vendor.[chunkhash:8].js'
-	})
+		minChunks: module => {
+			return module.resource && /\.(js|css|es6)$/.test(module.resource) && module.resource.indexOf('node_modules') !== -1; // eslint-disable-line max-len
+		}
+	}),
+	new webpack.optimize.CommonsChunkPlugin({ name: 'manifest' })
 );
 
 // Extract css in standalone css files
